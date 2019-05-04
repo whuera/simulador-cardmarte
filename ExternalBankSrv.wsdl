@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions
+	xmlns:s="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:tns="http://tempuri.org/"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	targetNamespace="http://tempuri.org/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WS Simulador Cardmarte
+	</wsdl:documentation>
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified"
+			targetNamespace="http://tempuri.org/">
+			<s:element name="UpdateReferredLink">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pExternalReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pStatus"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pFirstName"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pMiddleName" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pLastName"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pMaidenName" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pIdType"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pIdCountry"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pIdState"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pIdIssueDate" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pIdExpiration" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pIdValue"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pPersonTitle" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pDateOfBirth" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pCountry"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pState"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pCity"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAddress"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAddress2"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pZipCode"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pBillingCountry" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pBillingState" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pBillingCity" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="PBillingAddress" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pBillingAddress2" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pBillingZipCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pEmail"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTelAreaCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pTelNumber"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pCellAreaCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pCellNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pWorkAreaCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pWorkNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pCardAlias"
+							type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="UpdateReferredLinkResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="UpdateReferredLinkResult"
+							type="tns:UpdateReferredLinkResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="UpdateReferredLinkResult">
+				<s:sequence>
+				<!--  
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+						-->
+						<s:element minOccurs="0" maxOccurs="1"
+						name="SucessfullProcessing" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="RequestID"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="LanguageCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="ExternalUserCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationName" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Time"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="GMTTimeZone"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="OperationID"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ResultCode"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="ResultMessage" type="s:string" />
+						
+						
+						
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="OperationTagData">
+				<s:sequence>
+				<!--  
+					<s:element minOccurs="0" maxOccurs="1"
+						name="SucessfullProcessing" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="SystemName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="RequestID"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="LanguageCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="ExternalUserCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationName" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Time"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="GMTTimeZone"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="OperationID"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ResultCode"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="ResultMessage" type="s:string" />
+				 -->
+				</s:sequence>
+			</s:complexType>
+			<s:element name="Echo">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pRequestID" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="EchoResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="EchoResult"
+							type="tns:EchoResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="EchoResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="EnrollExternalAccount">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pExternalReferenceNumber" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="EnrollExternalAccountResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="EnrollExternalAccountResult"
+							type="tns:EnrollExternalAccountResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="EnrollExternalAccountResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="ExecuteTransaction">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pOriginReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTargetReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionCodeSpecified" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAmount"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pAmountSpecified" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pCurrencyCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pDetail"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionReference" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="ExecuteTransactionResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="ExecuteTransactionResult"
+							type="tns:ExecuteTransactionResult" />
+						
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ExecuteTransactionResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="TransactionNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Balance"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="AccountCurrencyCode" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetConvertedAmount">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pOriginCurrencyCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTargetCurrencyCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAmount"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pType"
+							type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetConvertedAmountResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="GetConvertedAmountResult"
+							type="tns:GetConvertedAmountResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="GetConvertedAmountResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1" name="Amount"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetCurrencyExchangeRate">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pOriginCurrencyCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTargetCurrencyCode" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetCurrencyExchangeRateResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="GetCurrencyExchangeRateResult"
+							type="tns:GetCurrencyExchangeRateResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="GetCurrencyExchangeRateResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1" name="Sale"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Buy"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="LastUpdateDate" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetTransactionStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionReference" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionReferenceSpecified" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pOriginReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTargetReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAmount"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pAmountSpecified" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pCurrencyCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="PTransactionDate" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetTransactionStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="GetTransactionStatusResult"
+							type="tns:GetTransactionStatusResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="GetTransactionStatusResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1" name="StatusCode"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="TransactionNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Balance"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="AccountCurrencyCode" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="RelateExistingAccount">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pExternalCardNumber" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RelateExistingAccountResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="RelateExistingAccountResult"
+							type="tns:RelateExistingAccountResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="RelateExistingAccountResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="Status"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="FirstName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MiddleName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="LastName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="MaidenName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="IdType"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="IdValue"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="DateOfBirth"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Country"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="State"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="City"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Address"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Address2"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="ZipCode"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Email"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="PhoneAreaCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="PhoneNumber"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="ExternalReferenceNumber" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="RequestExternalAccount">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pIdType"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pIdValue"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pFirstName"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pMiddleName" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pLastName"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pMaidenName" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pDateofBirth" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pCountry"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pState"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pCity"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAddress"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAdress2"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pZipCode"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pPhoneAreaCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pPhoneNumber" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="RequestExternalAccountResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="RequestExternalAccountResult"
+							type="tns:RequestExternalAccountResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="RequestExternalAccountResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="ExternalReferenceNumber" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Status"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="Verify">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pReferenceNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pAmount"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pCurrencyCode" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionCode" type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VerifyResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1"
+							name="VerifyResult" type="tns:VerifyResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="VerifyResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1" name="StatusCode"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="PersonName"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="IdType"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Id"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="TelephoneAreaCode" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Telephone"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="TelephoneType" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="CurrencyAccount" type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="GrossAmount"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="NetAmount"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1" name="Balance"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="Void">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="pRequestID"
+							type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1"
+							name="pTransactionNumber" type="s:string" />
+						<s:element minOccurs="0" maxOccurs="1" name="pDetail"
+							type="s:string" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VoidResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="VoidResult"
+							type="tns:VoidResult" />
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="VoidResult">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1"
+						name="OperationTag" type="tns:OperationTagData" />
+					<s:element minOccurs="0" maxOccurs="1" name="Balance"
+						type="s:string" />
+					<s:element minOccurs="0" maxOccurs="1"
+						name="AccountCurrencyCode" type="s:string" />
+				</s:sequence>
+			</s:complexType>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="UpdateReferredLinkSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:UpdateReferredLink" />
+	</wsdl:message>
+	<wsdl:message name="UpdateReferredLinkSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:UpdateReferredLinkResponse" />
+	</wsdl:message>
+	<wsdl:message name="EchoSoapIn">
+		<wsdl:part name="parameters" element="tns:Echo" />
+	</wsdl:message>
+	<wsdl:message name="EchoSoapOut">
+		<wsdl:part name="parameters" element="tns:EchoResponse" />
+	</wsdl:message>
+	<wsdl:message name="EnrollExternalAccountSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:EnrollExternalAccount" />
+	</wsdl:message>
+	<wsdl:message name="EnrollExternalAccountSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:EnrollExternalAccountResponse" />
+	</wsdl:message>
+	<wsdl:message name="ExecuteTransactionSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:ExecuteTransaction" />
+	</wsdl:message>
+	<wsdl:message name="ExecuteTransactionSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:ExecuteTransactionResponse" />
+	</wsdl:message>
+	<wsdl:message name="GetConvertedAmountSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:GetConvertedAmount" />
+	</wsdl:message>
+	<wsdl:message name="GetConvertedAmountSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:GetConvertedAmountResponse" />
+	</wsdl:message>
+	<wsdl:message name="GetCurrencyExchangeRateSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:GetCurrencyExchangeRate" />
+	</wsdl:message>
+	<wsdl:message name="GetCurrencyExchangeRateSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:GetCurrencyExchangeRateResponse" />
+	</wsdl:message>
+	<wsdl:message name="GetTransactionStatusSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:GetTransactionStatus" />
+	</wsdl:message>
+	<wsdl:message name="GetTransactionStatusSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:GetTransactionStatusResponse" />
+	</wsdl:message>
+	<wsdl:message name="RelateExistingAccountSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:RelateExistingAccount" />
+	</wsdl:message>
+	<wsdl:message name="RelateExistingAccountSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:RelateExistingAccountResponse" />
+	</wsdl:message>
+	<wsdl:message name="RequestExternalAccountSoapIn">
+		<wsdl:part name="parameters"
+			element="tns:RequestExternalAccount" />
+	</wsdl:message>
+	<wsdl:message name="RequestExternalAccountSoapOut">
+		<wsdl:part name="parameters"
+			element="tns:RequestExternalAccountResponse" />
+	</wsdl:message>
+	<wsdl:message name="VerifySoapIn">
+		<wsdl:part name="parameters" element="tns:Verify" />
+	</wsdl:message>
+	<wsdl:message name="VerifySoapOut">
+		<wsdl:part name="parameters" element="tns:VerifyResponse" />
+	</wsdl:message>
+	<wsdl:message name="VoidSoapIn">
+		<wsdl:part name="parameters" element="tns:Void" />
+	</wsdl:message>
+	<wsdl:message name="VoidSoapOut">
+		<wsdl:part name="parameters" element="tns:VoidResponse" />
+	</wsdl:message>
+	<wsdl:portType name="GenericWSRemesasAcqBanredSoap">
+		<wsdl:operation name="UpdateReferredLink">
+			<wsdl:input message="tns:UpdateReferredLinkSoapIn" />
+			<wsdl:output message="tns:UpdateReferredLinkSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="Echo">
+			<wsdl:input message="tns:EchoSoapIn" />
+			<wsdl:output message="tns:EchoSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="EnrollExternalAccount">
+			<wsdl:input message="tns:EnrollExternalAccountSoapIn" />
+			<wsdl:output message="tns:EnrollExternalAccountSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="ExecuteTransaction">
+			<wsdl:input message="tns:ExecuteTransactionSoapIn" />
+			<wsdl:output message="tns:ExecuteTransactionSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetConvertedAmount">
+			<wsdl:input message="tns:GetConvertedAmountSoapIn" />
+			<wsdl:output message="tns:GetConvertedAmountSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetCurrencyExchangeRate">
+			<wsdl:input message="tns:GetCurrencyExchangeRateSoapIn" />
+			<wsdl:output message="tns:GetCurrencyExchangeRateSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="GetTransactionStatus">
+			<wsdl:input message="tns:GetTransactionStatusSoapIn" />
+			<wsdl:output message="tns:GetTransactionStatusSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="RelateExistingAccount">
+			<wsdl:input message="tns:RelateExistingAccountSoapIn" />
+			<wsdl:output message="tns:RelateExistingAccountSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="RequestExternalAccount">
+			<wsdl:input message="tns:RequestExternalAccountSoapIn" />
+			<wsdl:output message="tns:RequestExternalAccountSoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="Verify">
+			<wsdl:input message="tns:VerifySoapIn" />
+			<wsdl:output message="tns:VerifySoapOut" />
+		</wsdl:operation>
+		<wsdl:operation name="Void">
+			<wsdl:input message="tns:VoidSoapIn" />
+			<wsdl:output message="tns:VoidSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="GenericWSRemesasAcqBanredSoap"
+		type="tns:GenericWSRemesasAcqBanredSoap">
+		<soap:binding
+			transport="http://schemas.xmlsoap.org/soap/http" />
+
+	<wsdl:operation name="ExecuteTransaction">
+		<soap:operation
+			soapAction="http://tempuri.org/ExecuteTransaction" style="document" />
+		<wsdl:input>
+			<soap:body use="literal" />
+		</wsdl:input>
+		<wsdl:output>
+			<soap:body use="literal" />
+		</wsdl:output>
+	</wsdl:operation> 
+
+	<wsdl:operation name="EnrollExternalAccount">
+		<soap:operation
+			soapAction="http://tempuri.org/EnrollExternalAccount"
+			style="document" />
+		<wsdl:input>
+			<soap:body use="literal" />
+		</wsdl:input>
+		<wsdl:output>
+			<soap:body use="literal" />
+		</wsdl:output>
+	</wsdl:operation>
+
+	<wsdl:operation name="Echo">
+		<soap:operation soapAction="http://tempuri.org/Echo"
+			style="document" />
+		<wsdl:input>
+			<soap:body use="literal" />
+		</wsdl:input>
+		<wsdl:output>
+			<soap:body use="literal" />
+		</wsdl:output>
+	</wsdl:operation>
+
+	<wsdl:operation name="UpdateReferredLink">
+		<soap:operation
+			soapAction="http://tempuri.org/UpdateReferredLink" style="document" />
+		<wsdl:input>
+			<soap:body use="literal" />
+		</wsdl:input>
+		<wsdl:output>
+			<soap:body use="literal" />
+		</wsdl:output>
+	</wsdl:operation>
+			
+		<wsdl:operation name="GetCurrencyExchangeRate">
+			<soap:operation
+				soapAction="http://tempuri.org/GetCurrencyExchangeRate"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetConvertedAmount">
+			<soap:operation
+				soapAction="http://tempuri.org/GetConvertedAmount" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="GetTransactionStatus">
+			<soap:operation
+				soapAction="http://tempuri.org/GetTransactionStatus"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	<wsdl:operation name="RequestExternalAccount">
+		<soap:operation
+			soapAction="http://tempuri.org/RequestExternalAccount"
+			style="document" />
+		<wsdl:input>
+			<soap:body use="literal" />
+		</wsdl:input>
+		<wsdl:output>
+			<soap:body use="literal" />
+		</wsdl:output>
+	</wsdl:operation> 
+		<wsdl:operation name="RelateExistingAccount">
+			<soap:operation
+				soapAction="http://tempuri.org/RelateExistingAccount"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Verify">
+			<soap:operation soapAction="http://tempuri.org/Verify"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Void">
+			<soap:operation soapAction="http://tempuri.org/Void"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="GenericWSRemesasAcqBanred">
+		<wsdl:documentation
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WS Cardmarte
+		</wsdl:documentation>
+		<wsdl:port name="GenericWSRemesasAcqBanredSoap"
+			binding="tns:GenericWSRemesasAcqBanredSoap">
+			<soap:address
+				location="http://localhost:8443/TCMSAPI/Views/ExternalBankSrv.wsdl" />
+		</wsdl:port>
+		<!-- <wsdl:port name="GenericWSRemesasAcqBanredSoap12" binding="tns:GenericWSRemesasAcqBanredSoap12"><soap12:address location="http://192.168.33.15:12809" /></wsdl:port> -->
+	</wsdl:service>
+</wsdl:definitions>
